@@ -1,7 +1,7 @@
 *Settings*
 Documentation       Suite de testes para verificar se o app esta online
 
-Resource        base.robot
+Resource        ${EXECDIR}/resources/base.robot
 
 Test Setup      Start Session
 Test Teardown   End Session
