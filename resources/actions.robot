@@ -11,15 +11,15 @@ Go To User Form
     ...     visible     5
 
 Fill User Form
-    [Arguments]     ${name}     ${email}    ${ordem}    ${bdate}    ${instagram}
-    Fill Text       css=input[name="nome"]     ${name}
-    Fill Text       css=input[name="email"]      ${email}
+    [Arguments]     ${user}
+    Fill Text       css=input[name="nome"]     ${user}[name]
+    Fill Text       css=input[name="email"]      ${user}[email]
     
-    Select Options By       css=.ordem select       text       ${ordem}
+    Select Options By       css=.ordem select       text       ${user}[ordem]
 
-    Select Birth Date           ${bdate}
+    Select Birth Date           ${user}[bdate]
    
-    Fill Text       id=insta                            ${instagram}    
+    Fill Text       id=insta                            ${user}[instagram]    
 
 
 Select Jedi
